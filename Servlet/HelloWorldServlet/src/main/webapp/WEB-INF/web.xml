@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://java.sun.com/xml/ns/javaee"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+         version="3.0">
+
+    <servlet>
+        <servlet-name>mainServlet</servlet-name>      <!-- имя сервлета -->
+        <servlet-class>MainServlet</servlet-class>    <!-- полный пакетный путь к севрлету -->
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>mainServlet</servlet-name>      <!-- имя сервлета (идентификатор) который хотим замапить на определенный URL -->
+        <url-pattern>/</url-pattern>                  <!-- говорит на какой URL мапить сервлет. Так как у нас стоит / — это значит что
+                                                           зайдя в корень проекта http://localhost:8080/servletexam/ мы получим сервлет,
+                                                           а именно то что в методе doGet.-->
+    </servlet-mapping>
+
+</web-app>
