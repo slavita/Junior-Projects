@@ -4,9 +4,9 @@ import javax.servlet.http.HttpSessionActivationListener;
 import javax.servlet.http.HttpSessionEvent;
 
 /**
- * Ýòîò Listener èñïîëüçóåòñÿ àòðèáóòàìè ñåññèè â ñëó÷àå,
- * åñëè ñåññèÿ áóäåò "ìèãðèðîâàòü" ìåæäó ðàçëè÷íûìè JVM
- * â ðàñïðåäåë¸ííûõ ïðèëîæåíèÿõ.
+ * Ð­Ñ‚Ð¾Ñ‚ Listener Ð¸ÑÐ¿Ð¾Ð»ÑŒÐ·ÑƒÐµÑ‚ÑÑ Ð°Ñ‚Ñ€Ð¸Ð±ÑƒÑ‚Ð°Ð¼Ð¸ ÑÐµÑÑÐ¸Ð¸ Ð² ÑÐ»ÑƒÑ‡Ð°Ðµ,
+ * ÐµÑÐ»Ð¸ ÑÐµÑÑÐ¸Ñ Ð±ÑƒÐ´ÐµÑ‚ "Ð¼Ð¸Ð³Ñ€Ð¸Ñ€Ð¾Ð²Ð°Ñ‚ÑŒ" Ð¼ÐµÐ¶Ð´Ñƒ Ñ€Ð°Ð·Ð»Ð¸Ñ‡Ð½Ñ‹Ð¼Ð¸ JVM
+ * Ð² Ñ€Ð°ÑÐ¿Ñ€ÐµÐ´ÐµÐ»Ñ‘Ð½Ð½Ñ‹Ñ… Ð¿Ñ€Ð¸Ð»Ð¾Ð¶ÐµÐ½Ð¸ÑÑ….
  */
 
 public class MyHttpSessionActivationListener implements HttpSessionActivationListener {
@@ -14,13 +14,13 @@ public class MyHttpSessionActivationListener implements HttpSessionActivationLis
         System.out.println(">> MyHttpSessionActivationListener - NEW");
     }
 
-    /** Âûçûâàåòñÿ ïåðåä òåì, êàê ñåññèÿ ñòàíåò ïàññèâíîé ïåðåä ìèãðàöèåé */
+    /** Ð’Ñ‹Ð·Ñ‹Ð²Ð°ÐµÑ‚ÑÑ Ð¿ÐµÑ€ÐµÐ´ Ñ‚ÐµÐ¼, ÐºÐ°Ðº ÑÐµÑÑÐ¸Ñ ÑÑ‚Ð°Ð½ÐµÑ‚ Ð¿Ð°ÑÑÐ¸Ð²Ð½Ð¾Ð¹ Ð¿ÐµÑ€ÐµÐ´ Ð¼Ð¸Ð³Ñ€Ð°Ñ†Ð¸ÐµÐ¹ */
     public void sessionWillPassivate(HttpSessionEvent httpSessionEvent) {
         System.out.println(">> HttpSession - will passivate, id = " + httpSessionEvent.getSession().getId());
     }
 
 
-    /** Âûçûâàåòñÿ ïîñëå òîãî, êàê ñåññèÿ ñòàëà àêòèâíîé ïîñëå ìèãðàöèè */
+    /** Ð’Ñ‹Ð·Ñ‹Ð²Ð°ÐµÑ‚ÑÑ Ð¿Ð¾ÑÐ»Ðµ Ñ‚Ð¾Ð³Ð¾, ÐºÐ°Ðº ÑÐµÑÑÐ¸Ñ ÑÑ‚Ð°Ð»Ð° Ð°ÐºÑ‚Ð¸Ð²Ð½Ð¾Ð¹ Ð¿Ð¾ÑÐ»Ðµ Ð¼Ð¸Ð³Ñ€Ð°Ñ†Ð¸Ð¸ */
     public void sessionDidActivate(HttpSessionEvent httpSessionEvent) {
         System.out.println(">> HttpSession - did activate, id = " + httpSessionEvent.getSession().getId());
     }

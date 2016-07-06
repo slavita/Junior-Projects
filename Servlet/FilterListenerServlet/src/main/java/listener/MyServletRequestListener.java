@@ -4,14 +4,14 @@ import javax.servlet.ServletRequestEvent;
 import javax.servlet.ServletRequestListener;
 
 /**
- * Этот Listener используется, соответственно, для того,
- * чтоб "уловить" момент создания и уничтожения запроса.
+ * Р­С‚РѕС‚ Listener РёСЃРїРѕР»СЊР·СѓРµС‚СЃСЏ, СЃРѕРѕС‚РІРµС‚СЃС‚РІРµРЅРЅРѕ, РґР»СЏ С‚РѕРіРѕ,
+ * С‡С‚РѕР± "СѓР»РѕРІРёС‚СЊ" РјРѕРјРµРЅС‚ СЃРѕР·РґР°РЅРёСЏ Рё СѓРЅРёС‡С‚РѕР¶РµРЅРёСЏ Р·Р°РїСЂРѕСЃР°.
  */
 public class MyServletRequestListener implements ServletRequestListener {
 
-    /** Вызывается когда запрос уничтожается */
+    /** Р’С‹Р·С‹РІР°РµС‚СЃСЏ РєРѕРіРґР° Р·Р°РїСЂРѕСЃ СѓРЅРёС‡С‚РѕР¶Р°РµС‚СЃСЏ */
     public void requestDestroyed(ServletRequestEvent servletRequestEvent) {}
 
-    /** Вызывается когда запрос инициализируется */
+    /** Р’С‹Р·С‹РІР°РµС‚СЃСЏ РєРѕРіРґР° Р·Р°РїСЂРѕСЃ РёРЅРёС†РёР°Р»РёР·РёСЂСѓРµС‚СЃСЏ */
     public void requestInitialized(ServletRequestEvent servletRequestEvent) {}
 }

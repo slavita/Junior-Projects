@@ -4,14 +4,14 @@ import javax.servlet.http.HttpSessionEvent;
 import javax.servlet.http.HttpSessionListener;
 
 /**
- * Этот Listener позволяет разроботчику "уловить"
- * момент создания и уничтожения сессии.
+ * Р­С‚РѕС‚ Listener РїРѕР·РІРѕР»СЏРµС‚ СЂР°Р·СЂРѕР±РѕС‚С‡РёРєСѓ "СѓР»РѕРІРёС‚СЊ"
+ * РјРѕРјРµРЅС‚ СЃРѕР·РґР°РЅРёСЏ Рё СѓРЅРёС‡С‚РѕР¶РµРЅРёСЏ СЃРµСЃСЃРёРё.
  */
 public class MyHttpSessionListener implements HttpSessionListener {
 
-    /** Вызывается когда сессия создается */
+    /** Р’С‹Р·С‹РІР°РµС‚СЃСЏ РєРѕРіРґР° СЃРµСЃСЃРёСЏ СЃРѕР·РґР°РµС‚СЃСЏ */
     public void sessionCreated(HttpSessionEvent httpSessionEvent) {}
 
-    /** Вызывается когда сессия уничтодается */
+    /** Р’С‹Р·С‹РІР°РµС‚СЃСЏ РєРѕРіРґР° СЃРµСЃСЃРёСЏ СѓРЅРёС‡С‚РѕРґР°РµС‚СЃСЏ */
     public void sessionDestroyed(HttpSessionEvent httpSessionEvent) {}
 }

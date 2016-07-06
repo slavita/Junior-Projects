@@ -11,20 +11,20 @@ public class RequestInfoFilter extends BaseFilter {
     @Override
     public void doFilter(HttpServletRequest servletRequest, HttpServletResponse servletResponse, FilterChain filterChain) throws IOException, ServletException {
 
-        /**  Âîçâðàùàåò èìÿ ìåòîäà HTTP, ñ êîòîðûì ñ ýòîé ïðîñüáîé îáðàòèëèñü */
+        /**  Ð’Ð¾Ð·Ð²Ñ€Ð°Ñ‰Ð°ÐµÑ‚ Ð¸Ð¼Ñ Ð¼ÐµÑ‚Ð¾Ð´Ð° HTTP, Ñ ÐºÐ¾Ñ‚Ð¾Ñ€Ñ‹Ð¼ Ñ ÑÑ‚Ð¾Ð¹ Ð¿Ñ€Ð¾ÑÑŒÐ±Ð¾Ð¹ Ð¾Ð±Ñ€Ð°Ñ‚Ð¸Ð»Ð¸ÑÑŒ */
         String method = servletRequest.getMethod();
 
         /**
-         * Âîçâðàùàåò èíòåðíåò-Ïðîòîêîë (IP) àäðåñ êëèåíòà èëè ïîñëåäíåãî ïðîêñè,
-         * êîòîðûé îòïðàâèë çàïðîñ.Äëÿ ñåðâëåòîâ HTTP, òî æå ñàìîå êàê çíà÷åíèå
-         * ïåðåìåííîé CGI REMOTE_ADDR.
+         * Ð’Ð¾Ð·Ð²Ñ€Ð°Ñ‰Ð°ÐµÑ‚ Ð¸Ð½Ñ‚ÐµÑ€Ð½ÐµÑ‚-ÐŸÑ€Ð¾Ñ‚Ð¾ÐºÐ¾Ð» (IP) Ð°Ð´Ñ€ÐµÑ ÐºÐ»Ð¸ÐµÐ½Ñ‚Ð° Ð¸Ð»Ð¸ Ð¿Ð¾ÑÐ»ÐµÐ´Ð½ÐµÐ³Ð¾ Ð¿Ñ€Ð¾ÐºÑÐ¸,
+         * ÐºÐ¾Ñ‚Ð¾Ñ€Ñ‹Ð¹ Ð¾Ñ‚Ð¿Ñ€Ð°Ð²Ð¸Ð» Ð·Ð°Ð¿Ñ€Ð¾Ñ.Ð”Ð»Ñ ÑÐµÑ€Ð²Ð»ÐµÑ‚Ð¾Ð² HTTP, Ñ‚Ð¾ Ð¶Ðµ ÑÐ°Ð¼Ð¾Ðµ ÐºÐ°Ðº Ð·Ð½Ð°Ñ‡ÐµÐ½Ð¸Ðµ
+         * Ð¿ÐµÑ€ÐµÐ¼ÐµÐ½Ð½Ð¾Ð¹ CGI REMOTE_ADDR.
          */
         String remoteAddr = servletRequest.getRemoteAddr();
 
-        /** Âîçâðàùàåò ñòðîêó çàïðîñà, êîòîðàÿ ñîäåðæèòñÿ â çàïðîñå URL ïîñëå ïóòè. */
+        /** Ð’Ð¾Ð·Ð²Ñ€Ð°Ñ‰Ð°ÐµÑ‚ ÑÑ‚Ñ€Ð¾ÐºÑƒ Ð·Ð°Ð¿Ñ€Ð¾ÑÐ°, ÐºÐ¾Ñ‚Ð¾Ñ€Ð°Ñ ÑÐ¾Ð´ÐµÑ€Ð¶Ð¸Ñ‚ÑÑ Ð² Ð·Ð°Ð¿Ñ€Ð¾ÑÐµ URL Ð¿Ð¾ÑÐ»Ðµ Ð¿ÑƒÑ‚Ð¸. */
         String queryString = servletRequest.getQueryString();
 
-        /** Âîçâðàùàåò èìÿ è âåðñèþ ïðîòîêîëà */
+        /** Ð’Ð¾Ð·Ð²Ñ€Ð°Ñ‰Ð°ÐµÑ‚ Ð¸Ð¼Ñ Ð¸ Ð²ÐµÑ€ÑÐ¸ÑŽ Ð¿Ñ€Ð¾Ñ‚Ð¾ÐºÐ¾Ð»Ð° */
         String protocol = servletRequest.getProtocol();
 
         System.out.println(">> RequestInfoFilter: method = " + method + ", remoteAddr = " + remoteAddr + ", queryString = " + queryString + ", protocol =  " + protocol);

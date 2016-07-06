@@ -4,16 +4,16 @@ import javax.servlet.ServletRequestAttributeEvent;
 import javax.servlet.ServletRequestAttributeListener;
 
 /**
- * Этот Listener используется при "слушании" событий происходящих с атрибутами  запроса.
+ * Р­С‚РѕС‚ Listener РёСЃРїРѕР»СЊР·СѓРµС‚СЃСЏ РїСЂРё "СЃР»СѓС€Р°РЅРёРё" СЃРѕР±С‹С‚РёР№ РїСЂРѕРёСЃС…РѕРґСЏС‰РёС… СЃ Р°С‚СЂРёР±СѓС‚Р°РјРё  Р·Р°РїСЂРѕСЃР°.
  */
 public class MyServletRequestAttributeListener implements ServletRequestAttributeListener {
 
-    /** Вызывается когда атрибут добавляется в запрос */
+    /** Р’С‹Р·С‹РІР°РµС‚СЃСЏ РєРѕРіРґР° Р°С‚СЂРёР±СѓС‚ РґРѕР±Р°РІР»СЏРµС‚СЃСЏ РІ Р·Р°РїСЂРѕСЃ */
     public void attributeAdded(ServletRequestAttributeEvent servletRequestAttributeEvent) {}
 
-    /**  Вызывается когда атрибут удаляется из запроса */
+    /**  Р’С‹Р·С‹РІР°РµС‚СЃСЏ РєРѕРіРґР° Р°С‚СЂРёР±СѓС‚ СѓРґР°Р»СЏРµС‚СЃСЏ РёР· Р·Р°РїСЂРѕСЃР° */
     public void attributeRemoved(ServletRequestAttributeEvent servletRequestAttributeEvent) {}
 
-    /** Вызывается когда атрибут меняет значение */
+    /** Р’С‹Р·С‹РІР°РµС‚СЃСЏ РєРѕРіРґР° Р°С‚СЂРёР±СѓС‚ РјРµРЅСЏРµС‚ Р·РЅР°С‡РµРЅРёРµ */
     public void attributeReplaced(ServletRequestAttributeEvent servletRequestAttributeEvent) {}
 }

@@ -8,7 +8,7 @@ import java.io.IOException;
 public class ProcessingTimeFilter implements Filter{
 
     public void init(FilterConfig filterConfig) throws ServletException {
-        /** Âîçâðàùàåò èìåíà ïàðàìåòðîâ èíèöèàëèçàöèè ôèëüòðà êàê Enumeration èç String */
+        /** Ð’Ð¾Ð·Ð²Ñ€Ð°Ñ‰Ð°ÐµÑ‚ Ð¸Ð¼ÐµÐ½Ð° Ð¿Ð°Ñ€Ð°Ð¼ÐµÑ‚Ñ€Ð¾Ð² Ð¸Ð½Ð¸Ñ†Ð¸Ð°Ð»Ð¸Ð·Ð°Ñ†Ð¸Ð¸ Ñ„Ð¸Ð»ÑŒÑ‚Ñ€Ð° ÐºÐ°Ðº Enumeration Ð¸Ð· String */
         System.out.println(filterConfig.getInitParameterNames());
         System.out.println(">> ProcessingTimeFilter - init");
     }

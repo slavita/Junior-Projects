@@ -4,22 +4,22 @@ import javax.servlet.ServletContextEvent;
 import javax.servlet.ServletContextListener;
 
 /**
- * Ýòîò Listener ïîçâîëÿåò ðàçðàáîò÷èêó "óëîâèòü" ìîìåíò êîãäà ServletContext
- * èíèöèàëèçèðóåòñÿ ëèáî óíè÷òîæàåòñÿ. Åãî ìîæíî èñïîëüçîâàòü, íàïðèìåð,
- * äëÿ îòêðûòèÿ ñîåäèíåíèÿ ñ áàçîé äàííûõ â ìîìåíò ñîçäàíèÿ êîíòåêñòà è
- * çàêðûòèÿ ñîåäèíåíèÿ â ìîìåíò óíè÷òîæåíèÿ êîíòåêñòà.
+ * Ð­Ñ‚Ð¾Ñ‚ Listener Ð¿Ð¾Ð·Ð²Ð¾Ð»ÑÐµÑ‚ Ñ€Ð°Ð·Ñ€Ð°Ð±Ð¾Ñ‚Ñ‡Ð¸ÐºÑƒ "ÑƒÐ»Ð¾Ð²Ð¸Ñ‚ÑŒ" Ð¼Ð¾Ð¼ÐµÐ½Ñ‚ ÐºÐ¾Ð³Ð´Ð° ServletContext
+ * Ð¸Ð½Ð¸Ñ†Ð¸Ð°Ð»Ð¸Ð·Ð¸Ñ€ÑƒÐµÑ‚ÑÑ Ð»Ð¸Ð±Ð¾ ÑƒÐ½Ð¸Ñ‡Ñ‚Ð¾Ð¶Ð°ÐµÑ‚ÑÑ. Ð•Ð³Ð¾ Ð¼Ð¾Ð¶Ð½Ð¾ Ð¸ÑÐ¿Ð¾Ð»ÑŒÐ·Ð¾Ð²Ð°Ñ‚ÑŒ, Ð½Ð°Ð¿Ñ€Ð¸Ð¼ÐµÑ€,
+ * Ð´Ð»Ñ Ð¾Ñ‚ÐºÑ€Ñ‹Ñ‚Ð¸Ñ ÑÐ¾ÐµÐ´Ð¸Ð½ÐµÐ½Ð¸Ñ Ñ Ð±Ð°Ð·Ð¾Ð¹ Ð´Ð°Ð½Ð½Ñ‹Ñ… Ð² Ð¼Ð¾Ð¼ÐµÐ½Ñ‚ ÑÐ¾Ð·Ð´Ð°Ð½Ð¸Ñ ÐºÐ¾Ð½Ñ‚ÐµÐºÑÑ‚Ð° Ð¸
+ * Ð·Ð°ÐºÑ€Ñ‹Ñ‚Ð¸Ñ ÑÐ¾ÐµÐ´Ð¸Ð½ÐµÐ½Ð¸Ñ Ð² Ð¼Ð¾Ð¼ÐµÐ½Ñ‚ ÑƒÐ½Ð¸Ñ‡Ñ‚Ð¾Ð¶ÐµÐ½Ð¸Ñ ÐºÐ¾Ð½Ñ‚ÐµÐºÑÑ‚Ð°.
  */
 public class MyServletContextListener implements ServletContextListener {
     public MyServletContextListener() {
         System.out.println(">> MyServletContextListener - NEW");
     }
 
-    /**  Âûçûâàåòñÿ ñðàçó ïîñëå ñîçäàíèÿ ServletContext-a  */
+    /**  Ð’Ñ‹Ð·Ñ‹Ð²Ð°ÐµÑ‚ÑÑ ÑÑ€Ð°Ð·Ñƒ Ð¿Ð¾ÑÐ»Ðµ ÑÐ¾Ð·Ð´Ð°Ð½Ð¸Ñ ServletContext-a  */
     public void contextInitialized(ServletContextEvent servletContextEvent) {
         System.out.println(">> ServletContext created, contextPath = " + servletContextEvent.getServletContext().getContextPath());
     }
 
-    /** Âûçûâàåòñÿ ïåðåä òåì êàê ServletContext áóäåò óíè÷òîæåí */
+    /** Ð’Ñ‹Ð·Ñ‹Ð²Ð°ÐµÑ‚ÑÑ Ð¿ÐµÑ€ÐµÐ´ Ñ‚ÐµÐ¼ ÐºÐ°Ðº ServletContext Ð±ÑƒÐ´ÐµÑ‚ ÑƒÐ½Ð¸Ñ‡Ñ‚Ð¾Ð¶ÐµÐ½ */
     public void contextDestroyed(ServletContextEvent servletContextEvent) {
         System.out.println(">> ServletContext destroyed");
     }

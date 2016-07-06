@@ -4,17 +4,17 @@ import javax.servlet.ServletContextAttributeEvent;
 import javax.servlet.ServletContextAttributeListener;
 
 /**
- *  Этот Listener используется для "слушания" событий,
- *  происходящих с атрибутами в сервлет контексте (ServletContext).
+ *  Р­С‚РѕС‚ Listener РёСЃРїРѕР»СЊР·СѓРµС‚СЃСЏ РґР»СЏ "СЃР»СѓС€Р°РЅРёСЏ" СЃРѕР±С‹С‚РёР№,
+ *  РїСЂРѕРёСЃС…РѕРґСЏС‰РёС… СЃ Р°С‚СЂРёР±СѓС‚Р°РјРё РІ СЃРµСЂРІР»РµС‚ РєРѕРЅС‚РµРєСЃС‚Рµ (ServletContext).
  */
 public class MyServletContextAttributeListener implements ServletContextAttributeListener {
 
-    /** Вызывается когда атрибут добавляется в ServletContext */
+    /** Р’С‹Р·С‹РІР°РµС‚СЃСЏ РєРѕРіРґР° Р°С‚СЂРёР±СѓС‚ РґРѕР±Р°РІР»СЏРµС‚СЃСЏ РІ ServletContext */
     public void attributeAdded(ServletContextAttributeEvent servletContextAttributeEvent) {}
 
-    /** Вызывается когда атрибут удаляется из ServletContext-a */
+    /** Р’С‹Р·С‹РІР°РµС‚СЃСЏ РєРѕРіРґР° Р°С‚СЂРёР±СѓС‚ СѓРґР°Р»СЏРµС‚СЃСЏ РёР· ServletContext-a */
     public void attributeRemoved(ServletContextAttributeEvent servletContextAttributeEvent) {}
 
-    /** Вызывается когда атрибут меняет значение */
+    /** Р’С‹Р·С‹РІР°РµС‚СЃСЏ РєРѕРіРґР° Р°С‚СЂРёР±СѓС‚ РјРµРЅСЏРµС‚ Р·РЅР°С‡РµРЅРёРµ */
     public void attributeReplaced(ServletContextAttributeEvent servletContextAttributeEvent) {}
 }

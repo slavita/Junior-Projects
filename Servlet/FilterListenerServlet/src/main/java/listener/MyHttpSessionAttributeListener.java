@@ -3,16 +3,16 @@ package listener;
 import javax.servlet.http.HttpSessionAttributeListener;
 import javax.servlet.http.HttpSessionBindingEvent;
 
-/** Этот Listener используется для "слушания" событий происходящих с атрибутами в сессии. */
+/** Р­С‚РѕС‚ Listener РёСЃРїРѕР»СЊР·СѓРµС‚СЃСЏ РґР»СЏ "СЃР»СѓС€Р°РЅРёСЏ" СЃРѕР±С‹С‚РёР№ РїСЂРѕРёСЃС…РѕРґСЏС‰РёС… СЃ Р°С‚СЂРёР±СѓС‚Р°РјРё РІ СЃРµСЃСЃРёРё. */
 public class MyHttpSessionAttributeListener implements HttpSessionAttributeListener {
 
 
-    /** Вызывается когда атрибут добавляется в сессию */
+    /** Р’С‹Р·С‹РІР°РµС‚СЃСЏ РєРѕРіРґР° Р°С‚СЂРёР±СѓС‚ РґРѕР±Р°РІР»СЏРµС‚СЃСЏ РІ СЃРµСЃСЃРёСЋ */
     public void attributeAdded(HttpSessionBindingEvent httpSessionBindingEvent) {}
 
-    /**  Вызывается когда атрибут удаляется из запроса */
+    /**  Р’С‹Р·С‹РІР°РµС‚СЃСЏ РєРѕРіРґР° Р°С‚СЂРёР±СѓС‚ СѓРґР°Р»СЏРµС‚СЃСЏ РёР· Р·Р°РїСЂРѕСЃР° */
     public void attributeRemoved(HttpSessionBindingEvent httpSessionBindingEvent) {}
 
-    /**  Вызывается когда атрибут меняет значение */
+    /**  Р’С‹Р·С‹РІР°РµС‚СЃСЏ РєРѕРіРґР° Р°С‚СЂРёР±СѓС‚ РјРµРЅСЏРµС‚ Р·РЅР°С‡РµРЅРёРµ */
     public void attributeReplaced(HttpSessionBindingEvent httpSessionBindingEvent) {}
 }
