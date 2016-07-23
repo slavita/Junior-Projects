@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://java.sun.com/xml/ns/javaee"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+         version="3.0">
+
+  <display-name>Archetype Created Web Application</display-name>
+
+    <servlet>
+        <servlet-name>productController</servlet-name>
+        <servlet-class>com.test.controller.ProductController</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>productController</servlet-name>
+        <url-pattern>/product.do</url-pattern>
+    </servlet-mapping>
+
+
+    <!-- product All -->
+    <servlet>
+        <servlet-name>productAll</servlet-name>
+        <servlet-class>com.test.controller.ProductAllController</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>productAll</servlet-name>
+        <url-pattern>/productAll.do</url-pattern>
+    </servlet-mapping>
+
+
+    <!-- add -->
+    <servlet>
+        <servlet-name>productAddToBucket</servlet-name>
+        <servlet-class>com.test.controller.ProductAddToBucketController</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>productAddToBucket</servlet-name>
+        <url-pattern>/productAddToBucket.do</url-pattern>
+    </servlet-mapping>
+
+
+    <!-- remove -->
+    <servlet>
+        <servlet-name>productRemoveToBucket</servlet-name>
+        <servlet-class>com.test.controller.ProductRemoveFromBucketController</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>productRemoveToBucket</servlet-name>
+        <url-pattern>/productRemoveToBucket.do</url-pattern>
+    </servlet-mapping>
+
+    <!-- mock -->
+    <servlet>
+        <servlet-name>mockController</servlet-name>
+        <servlet-class>com.test.controller.MockController</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>mockController</servlet-name>
+        <url-pattern>/mock.do</url-pattern>
+    </servlet-mapping>
+
+    <!-- mvc mock -->
+    <servlet>
+        <servlet-name>mvcMockController</servlet-name>
+        <servlet-class>com.test.controller.MVCMockController</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>mvcMockController</servlet-name>
+        <url-pattern>/mvcMock.do</url-pattern>
+    </servlet-mapping>
+
+    <!-- session mock -->
+    <servlet>
+        <servlet-name>sessionMockController</servlet-name>
+        <servlet-class>com.test.controller.SessionMockController</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>sessionMockController</servlet-name>
+        <url-pattern>/sessionMock.do</url-pattern>
+    </servlet-mapping>
+
+    <!-- session mock -->
+    <servlet>
+        <servlet-name>session</servlet-name>
+        <servlet-class>com.test.controller.MySessionCreate</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>session</servlet-name>
+        <url-pattern>/mySessionCreate.do</url-pattern>
+    </servlet-mapping>
+
+
+    <!-- cookie mock -->
+    <servlet>
+        <servlet-name>cookieMockController</servlet-name>
+        <servlet-class>com.test.controller.CookieMockController</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>cookieMockController</servlet-name>
+        <url-pattern>/cookieMock.do</url-pattern>
+    </servlet-mapping>
+
+
+
+
+
+    <!-- LISTENERS
+    <listener>
+        <listener-class>com.test.listener.MyHttpSessionActivationListener</listener-class>
+    </listener>
+    <listener>
+        <listener-class>com.test.listener.MyHttpSessionAttributeListener</listener-class>
+    </listener>
+    <listener>
+        <listener-class>com.test.listener.MyHttpSessionBindingListener</listener-class>
+    </listener>
+    <listener>
+        <listener-class>com.test.listener.MyHttpSessionListener</listener-class>
+    </listener>
+    <listener>
+        <listener-class>com.test.listener.MyServletContextAttributeListener</listener-class>
+    </listener>
+    <listener>
+        <listener-class>com.test.listener.MyServletContextListener</listener-class>
+    </listener>
+    <listener>
+        <listener-class>com.test.listener.MyServletRequestAttributeListener</listener-class>
+    </listener>
+    <listener>
+        <listener-class>com.test.listener.MyServletRequestListener</listener-class>
+    </listener>
+    -->
+    <context-param>
+        <param-name>contextConfigLocation</param-name>
+        <param-value>/appContext-dao-aop-schema.xml</param-value>
+    </context-param>
+
+    <session-config>
+        <!-- minutes -->
+        <session-timeout>240</session-timeout>
+    </session-config>
+
+    <welcome-file-list>
+        <welcome-file>index.jsp</welcome-file>
+    </welcome-file-list>
+</web-app>
