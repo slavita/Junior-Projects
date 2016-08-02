@@ -1,0 +1,40 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="
+			http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.5.xsd
+			http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+			http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-2.5.xsd
+			http://www.springframework.org/schema/jee http://www.springframework.org/schema/jee/spring-jee-2.5.xsd
+			http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.5.xsd">
+
+
+    <bean id="aspect-profiler" class="com.test.aspect.SimpleProfiler"/>
+    <bean id="aspect-logger" class="com.test.aspect.SimpleLogger"/>
+    <bean id="aspect-exception-logger" class="com.test.aspect.SimpleExceptionLogger"/>
+
+    <aop:config>
+        <aop:aspect ref="aspect-profiler">
+            <aop:pointcut id="selectById"
+                          expression="execution(* com.test.dao.ProductDao.selectById(int)) and args(id)"/>
+            <aop:around pointcut-ref="selectById"
+                        method="profiler"/>
+        </aop:aspect>
+
+        <aop:aspect ref="aspect-logger">
+            <aop:pointcut id="any-dao-methods"
+                          expression="execution(* com.test.dao.ProductDao.*(..))"/>
+            <aop:around pointcut-ref="any-dao-methods"
+                        method="log"/>
+        </aop:aspect>
+
+        <aop:aspect ref="aspect-exception-logger">
+            <aop:pointcut id="any-public-methods"
+                          expression="execution(public * *(..))"/>
+            <aop:after-throwing pointcut-ref="any-public-methods"
+                                method="logException" throwing="t"/>
+        </aop:aspect>
+    </aop:config>
+
+    <bean id="productDao" class="com.test.dao.impl.ProductDaoMock" />
+</beans>
