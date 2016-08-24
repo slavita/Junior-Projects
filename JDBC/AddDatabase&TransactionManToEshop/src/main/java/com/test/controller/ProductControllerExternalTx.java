@@ -26,15 +26,13 @@ public class ProductControllerExternalTx extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         ApplicationContext context =
-                new ClassPathXmlApplicationContext("appContext.xml");
+                new ClassPathXmlApplicationContext("appContext-dao-external-tx.xml");
         TransactionManager txManager = (TransactionManager) context.getBean("txManager");
         final ProductDao productDao = (ProductDao) context.getBean("productDao");
         String idStr = req.getParameter(PARAM_ID);
         if(idStr != null){
             try {
                 final Integer id = Integer.valueOf(idStr);
-
-
                 Product model = txManager.doInTransaction(new Callable<Product>() {
                     @Override
                     public Product call() throws Exception {

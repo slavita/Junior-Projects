@@ -48,7 +48,6 @@
         <url-pattern>/productRemoveToBucket.do</url-pattern>
     </servlet-mapping>
 
-
     <session-config>
         <!-- minutes -->
         <session-timeout>240</session-timeout>
