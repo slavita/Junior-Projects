@@ -3,8 +3,10 @@ package com.test.controller;
 import com.test.dao.ProductDao;
 import com.test.dao.exception.DaoSystemException;
 import com.test.dao.exception.NoSuchEntityException;
+import com.test.dao.impl.ProductDaoJdbcExternalTxImpl;
 import com.test.entity.Product;
 //import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
